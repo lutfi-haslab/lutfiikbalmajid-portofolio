@@ -138,6 +138,16 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: "More",
+          items: [
+            {
+              html: `
+              <div id="google_translate_element"></div>
+              `,
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
