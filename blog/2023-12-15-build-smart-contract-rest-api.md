@@ -24,9 +24,9 @@ In this blog post, we will learn to build simple Smart Contract API using truffl
 
 ## Setup Truffle
 
-> Before we continue, i hoped that you already have a metamask account, if not, you can see how to create it here [**create-new-wallet**](https://myterablock.medium.com/how-to-create-or-import-a-metamask-wallet-a551fc2f5a6b)
-then add the tomochain testnet network [**add-tomochain-to-metamask**](https://docs.tomochain.com/general/how-to-connect-to-tomochain-network/metamask)
-and finally get the fund faucet, of the many networks, I think tomochain is the best in this case, on other networks it will usually give a little ethereum, 0.5 to 1 eth only. On tomochain we will get 15 TOMO. Get tomo fund here [**tomo-faucet**](https://faucet.testnet.tomochain.com/)
+> Before we continue, i hoped that you already have a metamask account, if not, you can see how to create it here **[create-new-wallet](https://myterablock.medium.com/how-to-create-or-import-a-metamask-wallet-a551fc2f5a6b)**
+> then add the tomochain testnet network **[add-tomochain-to-metamask](https://docs.tomochain.com/general/how-to-connect-to-tomochain-network/metamask)**
+> and finally get the fund faucet, of the many networks, I think tomochain is the best in this case, on other networks it will usually give a little ethereum, 0.5 to 1 eth only. On tomochain we will get 15 TOMO. Get tomo fund here **[tomo-faucet](https://faucet.testnet.tomochain.com/)**
 
 ![tomo-faucet](./img/tomo-faucet.png)
 
@@ -40,20 +40,23 @@ yarn global add truffle
 ```
 
 there are two way to get started with truffle, *truffle init* or *truffle unbox*
+
 ```bash
 truffle init
 # or
 truffle unbox
 ```
 
-![build-smart-contract-api](./img/truffle-init.png)
+![build-smart-contract-api]()
 
 next is to install package *truffle-hdwallet-provider*
+
 ```bash
 npm i truffle-hdwallet-provider
 # or
 yarn add truffle-hdwallet-provider
 ```
+
 In this practice, we will use tomochain as a network blockchain, so we must add a network chain to the truffle configuration.
 
 ```javascript
@@ -144,6 +147,7 @@ Until here, to check we have to compile it. by running the following command:
 ```bash
 truffle compile
 ```
+
 it will compile all Smart Contract inside folder contract.
 
 next we will deploy the smart contract by creating a file in the migrations folder with the name 1_migration.js
@@ -157,10 +161,13 @@ module.exports = function(deployer) {
 ```
 
 To deploy smart contracts on the tomochain testnet network, run the following command
+
 ```bash
 truffle migrate --network tomotestnet
 ```
+
 and then you will get the transactions receipt
+
 ```bash
 $ truffle migrate --network tomotestnet
 
@@ -321,9 +328,8 @@ console.log(coinbase)
 > HttpProvider is the rpc network url of the chain to be used.
 > contractAddress is the contract address obtained during deployment, see above.
 > abi is json data from solidity compile, can be seen in the build/contracts/{smart contract name}.json folder.
-> Private key can be seen in the metamask account, can read here [**Export-private-key**](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key)
+> Private key can be seen in the metamask account, can read here **[Export-private-key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key)**
 > coinbase is the address of our account (public key)
-
 
 next is call function getAllData() and storeData() with dummy data using self execution function (()=>{})() :D
 
@@ -394,9 +400,9 @@ $ node api/index.js
 }
 ```
 
-
 Next is to create an API with ExpressJS.
 install express with the following command
+
 ```bash
 npm install express --save
 npm install body-parser
@@ -406,6 +412,7 @@ yarn add body-parser
 ```
 
 here is minimal express API
+
 ```javascript
 const express = require('express')
 const app = express()
@@ -421,6 +428,7 @@ app.listen(port, () => {
 ```
 
 here is the full code for the rest API
+
 ```javascript
 const Web3 = require('web3')
 const express = require('express')
@@ -574,20 +582,21 @@ app.listen(port, () => {
 ```
 
 run the server with
+
 ```bash
 node api/index.js
 ```
 
 call getAllData()
 
-![get-all-data](./img/get-all-data.png)
+![get-all-data]()
 
 call getData(id)
 
-![get-by-id](./img/get-by-id.png)
+![get-by-id]()
 
 call storeData()
 
-![add-data](./img/add-data.png)
+![add-data]()
 
 > #### Hopefully my writing can help, Thank you
