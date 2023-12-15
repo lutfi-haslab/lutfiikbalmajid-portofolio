@@ -327,7 +327,7 @@ console.log(coinbase)
 
 > HttpProvider is the rpc network url of the chain to be used.
 > contractAddress is the contract address obtained during deployment, see above.
-> abi is json data from solidity compile, can be seen in the build/contracts/{smart contract name}.json folder.
+> abi is json data from solidity compile, can be seen in the build/contracts/\{smart contract name}.json folder.
 > Private key can be seen in the metamask account, can read here **[Export-private-key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key)**
 > coinbase is the address of our account (public key)
 
