@@ -1,26 +1,17 @@
-import React from 'react';
 import clsx from 'clsx';
-export default function FooterLayout({style, links, logo, copyright}) {
-  const googleTranslateElementInit = () => {
-    // @ts-ignore
-    new window.google.translate.TranslateElement(
-      {
-        pageLanguage: "en",
-        autoDisplay: false
-      },
-      "google_translate_element"
-    );
-  };
-  React.useEffect(() => {
-    var addScript = document.createElement("script");
-    addScript.setAttribute(
-      "src",
-      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    );
-    document.body.appendChild(addScript);
-     // @ts-ignore
-    window.googleTranslateElementInit = googleTranslateElementInit;
-  }, []);
+import React from 'react';
+
+export default function FooterLayout({ style, links, logo, copyright }) {
+  // const googleTranslateElementInit = () => {
+  //   new window.google.translate.TranslateElement({ pageLanguage: 'en', layout: window.google.translate.TranslateElement.FloatPosition.TOP_LEFT }, 'google_translate_element')
+  // }
+
+  // React.useEffect(() => {
+  //   var addScript = document.createElement('script');
+  //   addScript.setAttribute('src', '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
+  //   document.body.appendChild(addScript);
+  //   window.googleTranslateElementInit = googleTranslateElementInit;
+  // }, [])
 
   return (
     <footer

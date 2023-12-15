@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "My Site",
+  title: "Lutfi Ikbal Majid",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
@@ -76,10 +76,10 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Home",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "Lutfi Ikbal Majid Logo",
+        src: "img/logo.png",
       },
       items: [
         {
@@ -112,23 +112,6 @@ const config: Config = {
             },
           ],
         },
-        // {
-        //   title: "Community",
-        //   items: [
-        //     {
-        //       label: "Stack Overflow",
-        //       href: "https://stackoverflow.com/questions/tagged/docusaurus",
-        //     },
-        //     {
-        //       label: "Discord",
-        //       href: "https://discordapp.com/invite/docusaurus",
-        //     },
-        //     {
-        //       label: "Twitter",
-        //       href: "https://twitter.com/docusaurus",
-        //     },
-        //   ],
-        // },
         {
           title: "More Info",
           items: [
@@ -146,16 +129,16 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: "Translate",
-          items: [
-            {
-              html: `
-              <div id="google_translate_element"></div>
-              `,
-            },
-          ],
-        },
+        // {
+        //   title: "Translate",
+        //   items: [
+        //     {
+        //       html: `
+        //       <div id="google_translate_element"></div>
+        //       `,
+        //     },
+        //   ],
+        // },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Portofolio Lutfi Ikbal Majid, Inc. Built with Docusaurus.`,
     },
