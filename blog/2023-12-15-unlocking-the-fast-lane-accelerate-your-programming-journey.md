@@ -1,6 +1,6 @@
 ---
 title: "Unlocking the Fast Lane: Accelerate Your Programming Journey"
-slug: unlocking-the-fast-lane:-accelerate-your-rogramming-journey
+slug: unlocking-the-fast-lane-accelerate-your-programming-journey
 tags:
   - programming
   - coding
@@ -15,14 +15,14 @@ authors:
 <head>
  <meta name="keywords" content="programming, coding, fast, blog" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://lutfiikbalmajid.netlify.app/unlocking-the-fast-lane:-accelerate-your-rogramming-journey" />
+  <link rel="preconnect" href="/blog/unlocking-the-fast-lane-accelerate-your-programming-journey" />
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Unlocking the Fast Lane: Accelerate Your Programming Journey",
-      "description": "Learn the strategies to accelerate your programming learning journey and become a proficient coder.",
-      "url": "https://lutfiikbalmajid.netlify.app/unlocking-the-fast-lane:-accelerate-your-rogramming-journey",
+     {JSON.stringify({
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Unlocking the Fast Lane: Accelera\te Your Programming Journey",
+      "description":"Learn the strategies to accelerate your programming learning journey and become a proficient coder.",
+      "url":"/blog/unlocking-the-fast-lane-accelerate-your-programming-journey",
       "datePublished": "2023-12-16",
       "author": {
         "@type": "Person",
@@ -35,7 +35,7 @@ authors:
         "name": "Has-labs",
         "logo": "https://lutfiikbalmajid.netlify.app/img/logo.png"
       }
-    }
+    })}
   </script>
 </head>
 
