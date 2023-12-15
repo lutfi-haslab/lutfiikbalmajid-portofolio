@@ -28,7 +28,7 @@ In this blog post, we will learn to build simple Smart Contract API using truffl
 > then add the tomochain testnet network **[add-tomochain-to-metamask](https://docs.tomochain.com/general/how-to-connect-to-tomochain-network/metamask)**
 > and finally get the fund faucet, of the many networks, I think tomochain is the best in this case, on other networks it will usually give a little ethereum, 0.5 to 1 eth only. On tomochain we will get 15 TOMO. Get tomo fund here **[tomo-faucet](https://faucet.testnet.tomochain.com/)**
 
-![tomo-faucet](./img/tomo-faucet.png)
+![tomo-faucet](/img/0-zzgc7yuykcmttpxm.webp)
 
 to get truffle, first we have to install it with npm or yarn globally
 
@@ -47,7 +47,7 @@ truffle init
 truffle unbox
 ```
 
-![build-smart-contract-api]()
+![build-smart-contract-api](/img/0-4s9jgjhnuv5dcm-6.webp)
 
 next is to install package *truffle-hdwallet-provider*
 
@@ -589,14 +589,14 @@ node api/index.js
 
 call getAllData()
 
-![get-all-data]()
+![get-all-data](/img/0-dlxyhhpaxiputyp2.webp)
 
 call getData(id)
 
-![get-by-id]()
+![get-by-id](/img/0-ok9_dffyit3v_wtx.webp)
 
 call storeData()
 
-![add-data]()
+![add-data](/img/0-kwlm7yhbxufgcltk.webp)
 
 > #### Hopefully my writing can help, Thank you
