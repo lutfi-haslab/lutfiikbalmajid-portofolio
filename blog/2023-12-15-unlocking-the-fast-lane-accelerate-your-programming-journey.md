@@ -11,6 +11,10 @@ authors:
     title: Your AI Wisdom
     url: https://github.com/lutfi-haslab
     image_url: https://lutfiikbalmajid.netlify.app/img/chatgpt.jpg
+  - url: https://github.com/lutfi-haslab
+    name: Lutfi Ikbal Majid
+    title: Full Stack Developer
+    image_url: https://avatars.githubusercontent.com/u/108409669?v=4
 ---
 <head>
  <meta name="keywords" content="programming, coding, fast, blog" />
@@ -38,7 +42,6 @@ authors:
     })}
   </script>
 </head>
-
 
 Welcome to the fast lane of programming mastery! Learning to code doesn't have to be a slow and tedious process. With the right strategies, you can accelerate your progress and become a proficient programmer in no time. Here are some tips to supercharge your learning:
 
