@@ -4,8 +4,8 @@ backend:
   repo: lutfi-haslab/lutfiikbalmajid-portofolio
 
 # These lines should *not* be indented
-media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/img/content" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/img/content" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
 - name: blog
@@ -27,7 +27,55 @@ collections:
       name: "authors" 
       widget: "list"
       fields:
-        - { name: name, label: Name, widget: string, default: "Lutfi Ikbal Majid" }
-        - { name: title, label: Title, widget: string, default: "Full Stack Developer" } 
+        - { name: name, label: Name, widget: select, options: ["Lutfi Ikbal Majid", "ChatGPT", "Claude"] }
+        - { name: title, label: Title, select: string, options: ["Full Stack Developer", "Your AI Wisdom"] } 
         - { name: url, label: URL, widget: string , default: "https://github.com/lutfi-haslab"} 
-        - { name: image_url, label: image_url, widget: string, default: "https://avatars.githubusercontent.com/u/108409669?v=4" } 
+        - { name: image_url, label: image_url, widget: select, options: ["https://avatars.githubusercontent.com/u/108409669?v=4", "https://lutfiikbalmajid.netlify.app/img/chatgpt.jpg", "https://lutfiikbalmajid.netlify.app/img/claude.jpeg" ] } 
+- name: project
+  label: "Project"
+  folder: docs/Project
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - { name: description, label: Description, widget: string }
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+- name: code-snippet
+  label: "Code Snippet"
+  folder: "docs/Code Snippet"
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - { name: description, label: Description, widget: string }
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+- name: reuseable-components
+  label: "Reuseable Components"
+  folder: "docs/Reuseable Components"
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - { name: description, label: Description, widget: string }
+    - label: "Tags"
+      name: "tags"
+      widget: "list"

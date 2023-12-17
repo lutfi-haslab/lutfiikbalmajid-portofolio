@@ -48,6 +48,8 @@ const config: Config = {
       "classic",
       {
         docs: {
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -86,7 +88,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Extras by Author",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
