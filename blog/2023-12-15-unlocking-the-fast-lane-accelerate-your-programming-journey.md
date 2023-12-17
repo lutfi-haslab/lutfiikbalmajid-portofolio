@@ -7,10 +7,10 @@ tags:
   - fast
   - blog
 authors:
-  - name: Lutfi Ikbal Majid
-    title: Full Stack Developer
+  - name: ChatGPT
+    title: Your AI Wisdom
     url: https://github.com/lutfi-haslab
-    image_url: https://avatars.githubusercontent.com/u/108409669?v=4
+    image_url: https://lutfiikbalmajid.netlify.app/img/chatgpt.jpg
 ---
 <head>
  <meta name="keywords" content="programming, coding, fast, blog" />
