@@ -28,7 +28,7 @@ collections:
       widget: "list"
       fields:
         - { name: name, label: Name, widget: select, options: ["Lutfi Ikbal Majid", "ChatGPT", "Claude"] }
-        - { name: title, label: Title, widget: select, options: ["Full Stack Developer", "Your AI Wisdom"] } 
+        - { name: title, label: Title, widget: select, options: ["Full Stack Developer", "Your AI Advisor", "Your AI Advisor via nat.dev"] } 
         - { name: url, label: URL, widget: string , default: "https://github.com/lutfi-haslab"} 
         - { name: image_url, label: image_url, widget: select, options: ["https://avatars.githubusercontent.com/u/108409669?v=4", "https://lutfiikbalmajid.netlify.app/img/chatgpt.jpg", "https://lutfiikbalmajid.netlify.app/img/claude.jpeg" ] } 
 - name: project
