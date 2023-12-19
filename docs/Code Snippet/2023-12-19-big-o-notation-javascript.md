@@ -15,7 +15,7 @@ Some examples of Big O notation:
 - O(log n) : Logarithmic time - the time grows logarithmically with the input size. Example: Binary search.
 - O(n * log n): When an O(n) operation is performed on an O(log n) operation. Example: Sorting algorithms like merge sort.
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/lutfi-haslab/embed/XWOvvzV?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" scrolling="no" title="Untitled" src="https://codepen.io/lutfi-haslab/embed/XWOvvzV?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/lutfi-haslab/pen/XWOvvzV">
   Untitled</a> by lutfi-haslab (<a href="https://codepen.io/lutfi-haslab">@lutfi-haslab</a>)
   on <a href="https://codepen.io">CodePen</a>.
