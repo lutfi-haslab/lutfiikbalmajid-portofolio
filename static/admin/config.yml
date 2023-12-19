@@ -35,7 +35,7 @@ collections:
   label: "Project"
   folder: docs/Project
   identifier_field: title
-  extension: md
+  extension: mdx
   widget: "list"
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -51,7 +51,7 @@ collections:
   label: "Code Snippet"
   folder: "docs/Code Snippet"
   identifier_field: title
-  extension: md
+  extension: mdx
   widget: "list"
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -67,7 +67,7 @@ collections:
   label: "Reuseable Components"
   folder: "docs/Reuseable Components"
   identifier_field: title
-  extension: md
+  extension: mdx
   widget: "list"
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
