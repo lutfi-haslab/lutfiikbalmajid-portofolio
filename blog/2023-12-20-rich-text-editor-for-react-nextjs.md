@@ -32,7 +32,7 @@ import {
 } from 'slate'
 import { withHistory } from 'slate-history'
 
-"import { Button, Icon, Toolbar } from '../components'"
+import { Button, Icon, Toolbar } from '../components'
 
 const HOTKEYS = {
   'mod+b': 'bold',
@@ -293,7 +293,7 @@ const initialValue: Descendant[] = [
 export default RichTextExample
 ```
 
-I didn't end up using slate js, because I couldn't find these components in its folder structure: import { Button, Icon, Toolbar } from '../components'
+I didn't end up using slate js, because I couldn't find these components in its folder structure: import \{ Button, Icon, Toolbar } from '../components'
 
 So I decided to try the third option, Quill. The result was good and easy to understand.
 
