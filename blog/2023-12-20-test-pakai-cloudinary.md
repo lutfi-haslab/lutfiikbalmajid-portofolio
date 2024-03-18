@@ -9,6 +9,6 @@ authors:
 ---
 ![](https://res.cloudinary.com/haslab/image/upload/v1648428907/iot.jpg)
 
-![](https://res.cloudinary.com/haslab/image/upload/v1627049532/samples/ecommerce/leather-bag-gray.jpg)
+Test pakai cloudinary kedua
 
-![](https://res.cloudinary.com/haslab/image/upload/v1655189562/demo-qr_i6zq2s.jpg)
+Test pakai cloudinary ketiga

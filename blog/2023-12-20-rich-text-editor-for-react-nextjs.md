@@ -15,6 +15,9 @@ authors:
     title: Full Stack Developer
     image_url: https://avatars.githubusercontent.com/u/108409669?v=4
 ---
+
+!["quill rich text editor"](https://miro.medium.com/v2/resize:fit:1400/1*KxknuOmsXhpCXIlcjV45MA.png)
+
 I'm thinking of making a mini project, a shared notepad, but I found the default Textarea limited. So I decided to find a Rich Text Editor, with options like CKEditor, Slate Rich Text Editor and Quill Text Editor.
 
 CKEditor is a commercial Rich Text Editor with a free license option, but I changed my mind. I think an open source one would be better, I first tried SlateJS:

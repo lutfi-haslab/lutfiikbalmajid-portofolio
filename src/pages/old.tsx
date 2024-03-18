@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LayoutProvider from "../theme/Layout/Provider";
 import Navbar from "../theme/Navbar";
+import parser from "html-react-parser";
 
 type BlogItemFeed = {
   id: string;
@@ -23,8 +24,25 @@ type BlogFeed = {
   items: BlogItemFeed[];
 };
 
+const BlogComponent = ({ html_string }) => {
+  const htmlElements = parser(html_string, { trim: true }) as any;
+  console.log(htmlElements);
+
+  // Check if there are at least three elements
+  if (htmlElements.length >= 3) {
+    return (
+      <div className="bg-blue-400 m-2 p-6 rounded">
+        {htmlElements.splice(0, 3).map((item) => item)}
+      </div>
+    );
+  } else {
+    return <div>Not enough elements in the HTML string</div>;
+  }
+};
+
 const Old = () => {
   const [blogFeed, setBlogFeed] = useState<BlogFeed>();
+  const [newContent, setNewContent] = useState();
 
   useEffect(() => {
     fetchData();
@@ -36,9 +54,12 @@ const Old = () => {
         "https://lutfiikbalmajid.netlify.app/blog/feed.json"
       );
       if (response.ok) {
-        const data = await response.json();
-        console.log(data);
+        const data = (await response.json()) as BlogFeed;
         setBlogFeed(data);
+
+        // const htmlElements = parser(data?.items[2]?.content_html.slice(0, 3));
+        // // const firstThreeElements = parser(htmlElements.slice(0, 3));
+        // console.log(htmlElements)
       } else {
         console.error("Failed to fetch blog feed:", response.status);
       }
@@ -51,8 +72,24 @@ const Old = () => {
     <LayoutProvider>
       <Navbar />
       <main>
-        <div>{blogFeed && <p>blogFeed?.title</p>}</div>
         <div className="flex flex-col justify-start p-6">
+          <div>
+            {/* {blogFeed && <p>{blogFeed?.title}</p>} */}
+            {blogFeed && blogFeed?.items?.map((item, i) => (
+                <BlogComponent html_string={item.content_html} />
+            ))}
+            {/* Content */}
+            <div>
+              {/* {
+                blogFeed?.items.map((item, index) => (
+                    <p>{parser(item.content_html)}</p>
+                ))
+            } */}
+              <p>
+                {/* //   {blogFeed ? parser(blogFeed?.items[2]?.content_html) : "loading"} */}
+              </p>
+            </div>
+          </div>
           <h1>Lutfi Ikbal Majid</h1>
           <h3>Profile Summary:</h3>
           <p>
