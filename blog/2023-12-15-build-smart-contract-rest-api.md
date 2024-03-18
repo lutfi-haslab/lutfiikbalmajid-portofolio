@@ -12,7 +12,7 @@ authors:
     url: https://github.com/lutfi-haslab
     image_url: https://avatars.githubusercontent.com/u/108409669?v=4
 ---
-![blockchain-smartcontract](https://litslink.com/wp-content/uploads/2023/01/How-Do-Smart-Contracts-Work_%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-1-1024x683.png)
+<img src="https://litslink.com/wp-content/uploads/2023/01/How-Do-Smart-Contracts-Work_%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-1-1024x683.png" alt="blockchain-smartcontract" />
 
 Blockchain and smart contracts are two of the most innovative technologies of the 21st century, and have the potential to revolutionize a wide range of industries, from finance and healthcare to supply chain management and real estate.
 
