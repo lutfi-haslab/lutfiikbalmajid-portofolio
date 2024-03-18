@@ -12,6 +12,8 @@ authors:
     url: https://github.com/lutfi-haslab
     image_url: https://avatars.githubusercontent.com/u/108409669?v=4
 ---
+![blockchain-smartcontract](https://litslink.com/wp-content/uploads/2023/01/How-Do-Smart-Contracts-Work_%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-1-1024x683.png)
+
 Blockchain and smart contracts are two of the most innovative technologies of the 21st century, and have the potential to revolutionize a wide range of industries, from finance and healthcare to supply chain management and real estate.
 
 Blockchain is a decentralized digital ledger that records transactions across a network of computers. It uses cryptography to secure and verify transactions and control the creation of new units of a particular cryptocurrency.
@@ -327,7 +329,7 @@ console.log(coinbase)
 
 > HttpProvider is the rpc network url of the chain to be used.
 > contractAddress is the contract address obtained during deployment, see above.
-> abi is json data from solidity compile, can be seen in the build/contracts/\{smart contract name}.json folder.
+> abi is json data from solidity compile, can be seen in the build/contracts/{smart contract name}.json folder.
 > Private key can be seen in the metamask account, can read here **[Export-private-key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key)**
 > coinbase is the address of our account (public key)
 
