@@ -1,0 +1,29 @@
+[
+    {
+        "type": "blog",
+        "title": "Lutfi Ikbal Majid Blog",
+        "home_page_url": "https://lutfiikbalmajid.netlify.app/blog",
+        "description": "Lutfi Ikbal Majid Blog"
+    },
+    {
+        "type": "extra-by-author",
+        "child": [
+            {
+                "name": "introduction",
+                "content": []
+            },
+            {
+                "name": "code-snippet",
+                "content": []
+            },
+            {
+                "name": "project",
+                "content": []
+            },
+            {
+                "name": "reusable-component",
+                "content": []
+            }
+        ]
+    }
+]
