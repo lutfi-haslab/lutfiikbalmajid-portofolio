@@ -1,44 +1,9 @@
 import React, { useEffect, useState } from "react";
 import LayoutProvider from "../theme/Layout/Provider";
 import Navbar from "../theme/Navbar";
-import parser from "html-react-parser";
+import BlogComponent from "../components/BlogComponent";
 
-type BlogItemFeed = {
-  id: string;
-  content_html: string;
-  url: string;
-  title: string;
-  date_modified: string;
-  author: {
-    name: string;
-    url: string;
-  };
-  tags: string[];
-};
 
-type BlogFeed = {
-  version: string;
-  title: string;
-  home_page_url: string;
-  description: string;
-  items: BlogItemFeed[];
-};
-
-const BlogComponent = ({ html_string }) => {
-  const htmlElements = parser(html_string, { trim: true }) as any;
-  console.log(htmlElements);
-
-  // Check if there are at least three elements
-  if (htmlElements.length >= 3) {
-    return (
-      <div className="bg-blue-400 m-2 p-6 rounded">
-        {htmlElements.splice(0, 3).map((item) => item)}
-      </div>
-    );
-  } else {
-    return <div>Not enough elements in the HTML string</div>;
-  }
-};
 
 const Old = () => {
   const [blogFeed, setBlogFeed] = useState<BlogFeed>();
@@ -76,7 +41,7 @@ const Old = () => {
           <div>
             {/* {blogFeed && <p>{blogFeed?.title}</p>} */}
             {blogFeed && blogFeed?.items?.map((item, i) => (
-                <BlogComponent html_string={item.content_html} />
+                <BlogComponent item={item} />
             ))}
             {/* Content */}
             <div>
