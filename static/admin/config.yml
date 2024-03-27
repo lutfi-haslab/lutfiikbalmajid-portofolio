@@ -47,9 +47,9 @@ collections:
     - label: "Tags"
       name: "tags"
       widget: "list"
-- name: code-snippet
-  label: "Code Snippet"
-  folder: "docs/Code Snippet"
+- name: knowledge-base
+  label: "Knowledge Base"
+  folder: "docs/Knowledge Base"
   identifier_field: title
   extension: md
   widget: "list"
@@ -63,9 +63,78 @@ collections:
     - label: "Tags"
       name: "tags"
       widget: "list"
-- name: reuseable-components
-  label: "Reuseable Components"
-  folder: "docs/Reuseable Components"
+
+- name: linux
+  label: "Linux"
+  folder: "docs/Knowledge Base/linux"
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - { name: description, label: Description, widget: string }
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+
+- name: javascript
+  label: "Javascript"
+  folder: "docs/Knowledge Base/javascript"
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - { name: description, label: Description, widget: string }
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+
+- name: react-js
+  label: "ReactJS"
+  folder: "docs/Knowledge Base/react-js"
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - { name: description, label: Description, widget: string }
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+
+- name: blockchain
+  label: "Blockchain"
+  folder: "docs/Knowledge Base/blockchain"
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - { name: description, label: Description, widget: string }
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+
+- name: tensorflow-js
+  label: "Tensorflow Node/JS"
+  folder: "docs/Knowledge Base/tensorflow-js"
   identifier_field: title
   extension: md
   widget: "list"
