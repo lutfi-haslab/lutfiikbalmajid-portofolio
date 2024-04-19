@@ -5,6 +5,7 @@ import React from "react";
 import { Tooltip } from "react-tooltip";
 import { TypeAnimation } from "react-type-animation";
 import BlogComponent from "../components/BlogComponent";
+import { myProjects } from "../data/my-projects";
 
 export default function Home(): JSX.Element {
   const [showNavMobile, setShowNavMobile] = React.useState(false);
@@ -34,6 +35,19 @@ export default function Home(): JSX.Element {
       console.error("Error fetching blog feed:", error);
     }
   };
+
+  function getRandomBgColor() {
+    const colors = [
+      "bg-blue-700",
+      "bg-green-600",
+      "bg-red-600",
+      "bg-yellow-500",
+      "bg-purple-600",
+      "bg-pink-600",
+    ];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  }
 
   return (
     <div
@@ -220,236 +234,80 @@ export default function Home(): JSX.Element {
           >
             <span className="text-white">Project that i has been </span>
             <span className="text-green-400">done</span>
-          </div>{" "}
+          </div>
           {/* top */}
           <div className="flex flex-col">
-            <img
-              loading="lazy"
-              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/30272052496c7f1c9876a47f2d75ba4cf41ba8a5293712019255bb64d8f64175?apiKey=b4b8e1120d4040cb8e27288270221f30&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/30272052496c7f1c9876a47f2d75ba4cf41ba8a5293712019255bb64d8f64175?apiKey=b4b8e1120d4040cb8e27288270221f30&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/30272052496c7f1c9876a47f2d75ba4cf41ba8a5293712019255bb64d8f64175?apiKey=b4b8e1120d4040cb8e27288270221f30&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/30272052496c7f1c9876a47f2d75ba4cf41ba8a5293712019255bb64d8f64175?apiKey=b4b8e1120d4040cb8e27288270221f30&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/30272052496c7f1c9876a47f2d75ba4cf41ba8a5293712019255bb64d8f64175?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/30272052496c7f1c9876a47f2d75ba4cf41ba8a5293712019255bb64d8f64175?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/30272052496c7f1c9876a47f2d75ba4cf41ba8a5293712019255bb64d8f64175?apiKey=b4b8e1120d4040cb8e27288270221f30&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/30272052496c7f1c9876a47f2d75ba4cf41ba8a5293712019255bb64d8f64175?apiKey=b4b8e1120d4040cb8e27288270221f30&"
-            />
+            <img loading="lazy" srcSet={myProjects[0].img_url} />
             <div className="mt-4 flex flex-col">
               <div className="text-neutral-200 text-lg font-bold max-md:max-w-full flex space-x-2 items-center">
-                <p>Web Development </p>
-                <p data-tooltip-id="info1" className="text-green-400 text-base">
+                <p>{myProjects[0].type}</p>
+                <p
+                  data-tooltip-id={myProjects[0].work_title}
+                  className="text-green-400 text-base"
+                >
                   detail
                 </p>
-              </div>{" "}
+              </div>
               <div className="text-white text-2xl font-bold max-md:max-w-full">
-                <p>PRIfA CBDC Web suite </p>
+                <p>{myProjects[0].work_title}</p>
                 <div className="text-sm">
                   <p>
                     tags:{" "}
-                    <span className="text-white bg-blue-700 mr-1">
-                      typescript
-                    </span>
-                    <span className="text-white bg-green-600 mr-1">rust</span>
-                    <span className="text-white bg-blue-700 mr-1">react</span>
-                    <span className="text-white bg-green-600 mr-1">
-                      blockchain
-                    </span>
+                    {myProjects[0].tags.map((tag) => (
+                      <span
+                        className={`text-white mr-1 px-2 py-1 rounded-md ${getRandomBgColor()}`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div>{" "}
-              <Tooltip id="info1">
+              <Tooltip id={myProjects[0].work_title}>
                 <div className="w-52">
-                  <p className="text-sm">
-                    Web application build with react as frontend and nestjs as
-                    backend for prototype Central Bank digital currency, there
-                    is 5 website including, Central Bank Suite, Core System
-                    Suite, Financial Service Provider, Merchant Suite, and
-                    Enterprise Suite.
-                  </p>
+                  <p className="text-sm">{myProjects[0].detail}</p>
                 </div>
               </Tooltip>
             </div>
           </div>
           {/* list */}
           <div className="grid grid-cols-2 gap-4">
-            {/* 2nd */}
-            <div className="flex flex-col">
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/7462ccc519660d108566f355f66cf16c7ebab11c68d2d1ffb90763a5bbafde99?apiKey=b4b8e1120d4040cb8e27288270221f30&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7462ccc519660d108566f355f66cf16c7ebab11c68d2d1ffb90763a5bbafde99?apiKey=b4b8e1120d4040cb8e27288270221f30&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7462ccc519660d108566f355f66cf16c7ebab11c68d2d1ffb90763a5bbafde99?apiKey=b4b8e1120d4040cb8e27288270221f30&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7462ccc519660d108566f355f66cf16c7ebab11c68d2d1ffb90763a5bbafde99?apiKey=b4b8e1120d4040cb8e27288270221f30&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7462ccc519660d108566f355f66cf16c7ebab11c68d2d1ffb90763a5bbafde99?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7462ccc519660d108566f355f66cf16c7ebab11c68d2d1ffb90763a5bbafde99?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7462ccc519660d108566f355f66cf16c7ebab11c68d2d1ffb90763a5bbafde99?apiKey=b4b8e1120d4040cb8e27288270221f30&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7462ccc519660d108566f355f66cf16c7ebab11c68d2d1ffb90763a5bbafde99?apiKey=b4b8e1120d4040cb8e27288270221f30&"
-              />
-              <div className="mt-4 flex flex-col">
-                <div className="text-neutral-200 text-lg font-bold max-md:max-w-full flex space-x-2 items-center">
-                  <p>Mobile Development </p>
-                  <p
-                    data-tooltip-id="info2"
-                    className="text-green-400 text-base"
-                  >
-                    detail
-                  </p>
-                </div>{" "}
-                <div className="text-white text-2xl font-bold max-md:max-w-full">
-                  <p>PRIfA CBDC Mobile App</p>
-                  <div className="text-sm">
-                    <p>
-                      tags:{" "}
-                      <span className="text-white bg-blue-700 mr-1">
-                        Flutter
-                      </span>
+            {myProjects.slice(1).map((item) => (
+              <div className="flex flex-col">
+                <img loading="lazy" srcSet={item.img_url} />
+                <div className="mt-4 flex flex-col">
+                  <div className="text-neutral-200 text-lg font-bold max-md:max-w-full flex space-x-2 items-center">
+                    <p>{item.type}</p>
+                    <p
+                      data-tooltip-id={item.work_title}
+                      className="text-green-400 text-base"
+                    >
+                      detail
                     </p>
-                  </div>
-                </div>{" "}
-                <Tooltip id="info2">
-                  <div className="w-52">
-                    <p className="text-sm">
-                      A mobile app wallet build with flutter for end user to
-                      send and receive DIDR money from CBDC and stablecoind.
-                    </p>
-                  </div>
-                </Tooltip>
+                  </div>{" "}
+                  <div className="text-white text-2xl font-bold max-md:max-w-full">
+                    <p>{item.work_title}</p>
+                    <div className="text-sm">
+                      <p>
+                        tags:
+                        {item.tags.map((tag) => (
+                          <span
+                            className={`text-white mr-1 px-2 py-1 rounded-md ${getRandomBgColor()}`}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
+                  </div>{" "}
+                  <Tooltip id={item.work_title}>
+                    <div className="w-52">
+                      <p className="text-sm">{item.detail}</p>
+                    </div>
+                  </Tooltip>
+                </div>
               </div>
-            </div>
-            {/* 3rd */}
-            <div className="min-h-full  flex flex-col">
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/f8bb3b528566a352d06413213b8aeca087fd2a9a2d50573c713b49d7cf78a9c6?apiKey=b4b8e1120d4040cb8e27288270221f30&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f8bb3b528566a352d06413213b8aeca087fd2a9a2d50573c713b49d7cf78a9c6?apiKey=b4b8e1120d4040cb8e27288270221f30&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f8bb3b528566a352d06413213b8aeca087fd2a9a2d50573c713b49d7cf78a9c6?apiKey=b4b8e1120d4040cb8e27288270221f30&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f8bb3b528566a352d06413213b8aeca087fd2a9a2d50573c713b49d7cf78a9c6?apiKey=b4b8e1120d4040cb8e27288270221f30&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f8bb3b528566a352d06413213b8aeca087fd2a9a2d50573c713b49d7cf78a9c6?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f8bb3b528566a352d06413213b8aeca087fd2a9a2d50573c713b49d7cf78a9c6?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f8bb3b528566a352d06413213b8aeca087fd2a9a2d50573c713b49d7cf78a9c6?apiKey=b4b8e1120d4040cb8e27288270221f30&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f8bb3b528566a352d06413213b8aeca087fd2a9a2d50573c713b49d7cf78a9c6?apiKey=b4b8e1120d4040cb8e27288270221f30&"
-              />
-              <div className="mt-4 flex flex-col">
-                <div className="text-neutral-200 text-lg font-bold max-md:max-w-full flex space-x-2 items-center">
-                  <p>Web Development </p>
-                  <p
-                    data-tooltip-id="info3"
-                    className="text-green-400 text-base"
-                  >
-                    detail
-                  </p>
-                </div>{" "}
-                <div className="text-white text-2xl font-bold max-md:max-w-full">
-                  <p>pChain, Blockchain as a Service</p>
-                  <div className="text-sm">
-                    <p>
-                      tags:{" "}
-                      <span className="text-white bg-blue-700 mr-1">
-                        Typescript
-                      </span>
-                      <span className="text-white bg-green-600 mr-1">
-                        NextJS
-                      </span>
-                      <span className="text-white bg-blue-700 mr-1">
-                        ReactJS
-                      </span>
-                      <span className="text-white bg-green-600 mr-1">
-                        Blockchain
-                      </span>
-                      <span className="text-white bg-blue-700 mr-1">
-                        Fastify
-                      </span>
-                    </p>
-                  </div>
-                </div>{" "}
-                <Tooltip id="info3">
-                  <div className="w-52">
-                    <p className="text-sm">
-                      pChain is a SaaS (Software as a Service) build with
-                      NextJs, that simplified Blockchain development using
-                      various Blockchain network such as Polygon edge,
-                      Hyperledger Besu, Avalance, and Ethereum Testnet. pChain
-                      is complete package, there is feature for IPFS storage,
-                      static storage using s3, wallet management, and smart
-                      contract management. User can use our API to implement
-                      Solidity API anywhere like Mobile App, Web, Desktop
-                      without worrying using ethers or web3 library.
-                    </p>
-                  </div>
-                </Tooltip>
-              </div>
-            </div>
-            {/* 4th */}
-            <div className="flex flex-col">
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/2a499229e359ecfa4603158c7a28e203962b1dda1a4d0ba12725ef3c3e951911?apiKey=b4b8e1120d4040cb8e27288270221f30&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a499229e359ecfa4603158c7a28e203962b1dda1a4d0ba12725ef3c3e951911?apiKey=b4b8e1120d4040cb8e27288270221f30&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a499229e359ecfa4603158c7a28e203962b1dda1a4d0ba12725ef3c3e951911?apiKey=b4b8e1120d4040cb8e27288270221f30&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a499229e359ecfa4603158c7a28e203962b1dda1a4d0ba12725ef3c3e951911?apiKey=b4b8e1120d4040cb8e27288270221f30&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a499229e359ecfa4603158c7a28e203962b1dda1a4d0ba12725ef3c3e951911?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a499229e359ecfa4603158c7a28e203962b1dda1a4d0ba12725ef3c3e951911?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a499229e359ecfa4603158c7a28e203962b1dda1a4d0ba12725ef3c3e951911?apiKey=b4b8e1120d4040cb8e27288270221f30&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a499229e359ecfa4603158c7a28e203962b1dda1a4d0ba12725ef3c3e951911?apiKey=b4b8e1120d4040cb8e27288270221f30&"
-              />
-              <div className="mt-4 flex flex-col">
-                <div className="text-neutral-200 text-lg font-bold max-md:max-w-full flex space-x-2 items-center">
-                  <p>Web Development </p>
-                  <p
-                    data-tooltip-id="info4"
-                    className="text-green-400 text-base"
-                  >
-                    detail
-                  </p>
-                </div>{" "}
-                <div className="text-white text-2xl font-bold max-md:max-w-full">
-                  <p>Peruri Authenticator Manager</p>
-                  <div className="text-sm">
-                    <p>
-                      tags:{" "}
-                      <span className="text-white bg-blue-700 mr-1">
-                        Typescript
-                      </span>
-                      <span className="text-white bg-green-600 mr-1">
-                        NextJS
-                      </span>
-                      <span className="text-white bg-blue-700 mr-1">
-                        ReactJS
-                      </span>
-                    </p>
-                  </div>
-                </div>{" "}
-                <Tooltip id="info4">
-                  <div className="w-52">
-                    <p className="text-sm">
-                      A website platform build with NextJS that work to upload
-                      document to the Blockchain and setting up the document
-                      format using pdf.js, the output from this file is PDF
-                      document with user generated style pdf and qr code.
-                    </p>
-                  </div>
-                </Tooltip>
-              </div>
-            </div>
-            {/* 5th */}
-            <div className="flex flex-col">
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/46c477cd217afe3561a9c12362b30993ba076d5973a55b3d214f1ab5593d9323?apiKey=b4b8e1120d4040cb8e27288270221f30&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/46c477cd217afe3561a9c12362b30993ba076d5973a55b3d214f1ab5593d9323?apiKey=b4b8e1120d4040cb8e27288270221f30&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/46c477cd217afe3561a9c12362b30993ba076d5973a55b3d214f1ab5593d9323?apiKey=b4b8e1120d4040cb8e27288270221f30&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/46c477cd217afe3561a9c12362b30993ba076d5973a55b3d214f1ab5593d9323?apiKey=b4b8e1120d4040cb8e27288270221f30&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/46c477cd217afe3561a9c12362b30993ba076d5973a55b3d214f1ab5593d9323?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/46c477cd217afe3561a9c12362b30993ba076d5973a55b3d214f1ab5593d9323?apiKey=b4b8e1120d4040cb8e27288270221f30&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/46c477cd217afe3561a9c12362b30993ba076d5973a55b3d214f1ab5593d9323?apiKey=b4b8e1120d4040cb8e27288270221f30&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/46c477cd217afe3561a9c12362b30993ba076d5973a55b3d214f1ab5593d9323?apiKey=b4b8e1120d4040cb8e27288270221f30&"
-              />
-              <div className="mt-4 flex flex-col">
-                <div className="text-neutral-200 text-lg font-bold max-md:max-w-full flex space-x-2 items-center">
-                  <p>Mobile Development </p>
-                  <p
-                    data-tooltip-id="info5"
-                    className="text-green-400 text-base"
-                  >
-                    detail
-                  </p>
-                </div>{" "}
-                <div className="text-white text-2xl font-bold max-md:max-w-full">
-                  <p>Mobile Peruri Authenticator</p>
-                  <div className="text-sm">
-                    <p>
-                      tags:{" "}
-                      <span className="text-white bg-blue-700 mr-1">
-                        Kotlin
-                      </span>
-                      <span className="text-white bg-green-600 mr-1">
-                        Image Processing
-                      </span>
-                      <span className="text-white bg-blue-700 mr-1">
-                        React Native
-                      </span>
-                      <span className="text-white bg-green-600 mr-1">
-                        Blockchain
-                      </span>
-                    </p>
-                  </div>
-                </div>{" "}
-                <Tooltip id="info5">
-                  <div className="w-52">
-                    <p className="text-sm">
-                      A Mobile app build with Kotlin that work to verify
-                      document using OpenCV QR scanner or file picker with
-                      Blockchain.
-                    </p>
-                  </div>
-                </Tooltip>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
         {/* Blog */}
