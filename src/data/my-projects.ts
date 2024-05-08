@@ -1,6 +1,13 @@
 export const myProjects = [
   {
-    id: 1,
+    work_title: "HasCode UI - Create UI with AI",
+    type: "Web Development",
+    img_url:"https://res.cloudinary.com/haslab/image/upload/v1715160549/portofolio/npqsdp7clleogzdal4dl.png",
+    tags: ["typescript", "nextjs", "ai", "no-code"],
+    detail:
+      "Web application to create stunning website with AI based on model GPT and Anthropic (Claude) API",
+  },
+  {
     work_title: "PRIfA CBDC Web suite",
     type: "Web Development",
     img_url:
@@ -10,7 +17,6 @@ export const myProjects = [
       "Web application build with react as frontend and nestjs as backend for prototype Central Bank digital currency, there is 5 website including, Central Bank Suite, Core System Suite, Financial Service Provider, Merchant Suite, and Enterprise Suite",
   },
   {
-    id: 2,
     work_title: "PRIfA CBDC Mobile App",
     type: "Mobile Development",
     img_url:
@@ -20,7 +26,6 @@ export const myProjects = [
       "A mobile app wallet build with flutter for end user to send and receive DIDR money from CBDC and stablecoind.",
   },
   {
-    id: 3,
     work_title: "pChain, Blockchain as a Service",
     type: "Web Development",
     img_url:
@@ -30,7 +35,6 @@ export const myProjects = [
       "pChain is a SaaS (Software as a Service) build with NextJs, that simplified Blockchain development using various Blockchain network such as Polygon edge, Hyperledger Besu, Avalance, and Ethereum Testnet. pChain is complete package, there is feature for IPFS storage, static storage using s3, wallet management, and smart contract management. User can use our API to implement Solidity API anywhere like Mobile App, Web, Desktop without worrying using ethers or web3 library.",
   },
   {
-    id: 4,
     work_title: "Peruri Authenticator Manager",
     type: "Web Development",
     img_url:
@@ -40,7 +44,6 @@ export const myProjects = [
       "A website platform build with NextJS that work to upload document to the Blockchain and setting up the document format using pdf.js, the output from this file is PDF document with user generated style pdf and qr code.",
   },
   {
-    id: 5,
     work_title: "Mobile Peruri Authenticator",
     type: "Mobile Development",
     tags: ["Kotlin", "Image Processing", "React Native", "Blockchain"],
@@ -50,7 +53,6 @@ export const myProjects = [
       "A Mobile app build with Kotlin that work to verify document using OpenCV QR scanner or file picker with Blockchain.",
   },
   {
-    id: 6,
     work_title: "eKYC AWS Liveness Rekognition",
     type: "Web Development",
     tags: ["AWS", "ReactJS", "Amplify"],
